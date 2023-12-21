@@ -1,0 +1,9 @@
+/*****************************************
+  IAM Bindings GKE SVC
+ *****************************************/
+
+resource "google_service_account" "gke_service_account" {
+  project      = var.project.id
+  account_id   = "${var.project.id}-${var.component_name}"
+  display_name = "GKE Service Account"
+}
